@@ -8,3 +8,7 @@ R - Restart
 D - Change difficulty  
 F - Toggle fullscreen  
 M - Mute music  
+
+Easy is quite easy  
+Normal is quite difficult  
+Don't even play hard  
