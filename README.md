@@ -1,5 +1,6 @@
 # MouseDodge
 Dodge balls with your mouse
+Stay alive for 60 seconds to win
 
 Download: https://github.com/Tkap1/MouseDodge/raw/master/MouseDodge.zip
 
@@ -12,3 +13,5 @@ M - Mute music
 Easy is quite easy  
 Normal is quite difficult  
 Don't even play hard  
+
+
