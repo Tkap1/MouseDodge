@@ -1,5 +1,5 @@
 # MouseDodge
-Dodge balls with your mouse
+Dodge balls with your mouse  
 Stay alive for 60 seconds to win
 
 Download: https://github.com/Tkap1/MouseDodge/raw/master/MouseDodge.zip
