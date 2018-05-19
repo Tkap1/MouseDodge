@@ -11,7 +11,7 @@ F - Toggle fullscreen
 M - Mute music  
 
 Easy is quite easy  
-Normal is quite difficult  
+Normal is very difficult  
 Don't even play hard  
 
 
