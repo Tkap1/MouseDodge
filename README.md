@@ -12,6 +12,6 @@ M - Mute music
 
 Easy is quite easy  
 Normal is very difficult  
-Don't even play hard  
+Hard is fun
 
 
