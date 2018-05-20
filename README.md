@@ -11,7 +11,7 @@ F - Toggle fullscreen
 M - Mute music  
 
 Easy is quite easy  
-Normal is challenging
-Hard is very difficult
+Normal is challenging  
+Hard is very difficult  
 
 
