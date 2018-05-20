@@ -8,7 +8,7 @@ Download: https://github.com/Tkap1/MouseDodge/raw/master/MouseDodge.zip
 R - Restart  
 D - Change difficulty  
 F - Toggle fullscreen  
-M - Mute music  
+M - Toggle music 
 
 Easy is quite easy  
 Normal is challenging  
