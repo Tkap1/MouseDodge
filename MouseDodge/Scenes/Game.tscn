@@ -71,15 +71,13 @@ autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="AudioMusic" type="AudioStreamPlayer2D" parent="." index="7"]
+[node name="AudioMusic" type="AudioStreamPlayer" parent="." index="7"]
 
 stream = ExtResource( 7 )
-volume_db = -15.0
+volume_db = -20.0
 autoplay = false
-max_distance = 2000.0
-attenuation = 1.0
+mix_target = 0
 bus = "Master"
-area_mask = 1
 
 [node name="AudioWin" type="AudioStreamPlayer" parent="." index="8"]
 
