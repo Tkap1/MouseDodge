@@ -1,5 +1,11 @@
 extends Node
 
+var game = preload("res://Scenes/Game.tscn")
+var main = preload("res://Scenes/SceneMain.tscn")
+var difficulty = preload("res://Scenes/SceneDifficulty.tscn")
+var lose = preload("res://Scenes/SceneLose.tscn")
+var win = preload("res://Scenes/SceneWin.tscn")
+
 var width = 800
 var height = 450
 var musicPlayback = 0.0
@@ -25,26 +31,23 @@ func showFPS():
 	print(Performance.get_monitor(Performance.TIME_FPS))
 	
 func setSceneGame(old):
-	var new = load("res://Scenes/Game.tscn").instance()
-	setScene(new,old)
+	setScene(game.instance(),old)
 	
 func setSceneMain(old):
-	var new = load("res://Scenes/SceneMain.tscn").instance()
-	setScene(new,old)
+	setScene(main.instance(),old)
 	
 func setSceneDifficulty(old):
-	var new = load("res://Scenes/SceneDifficulty.tscn").instance()
-	setScene(new,old)
+	setScene(difficulty.instance(),old)
 	
 func setSceneLose(old,score):
-	var new = load("res://Scenes/SceneLose.tscn").instance()
-	setScene(new,old)
-	new.init(score)
+	var newLose = lose.instance()
+	setScene(newLose,old)
+	newLose.init(score)
 	
 func setSceneWin(old,score):
-	var new = load("res://Scenes/SceneWin.tscn").instance()
-	setScene(new,old)
-	new.init(score)
+	var newWin = win.instance()
+	setScene(newWin,old)
+	newWin.init(score)
 	
 	
 func setEasy():

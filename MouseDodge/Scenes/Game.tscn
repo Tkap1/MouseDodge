@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/ParallaxBackground.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Assets/font32.tres" type="DynamicFont" id=3]
-[ext_resource path="res://Scenes/Sprites.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Sprites.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/ParallaxBackground.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/font32.tres" type="DynamicFont" id=4]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Assets/playerDeath.wav" type="AudioStream" id=6]
 [ext_resource path="res://Assets/music.ogg" type="AudioStream" id=7]
@@ -13,11 +13,13 @@
 
 script = ExtResource( 1 )
 
-[node name="ParallaxBackground" parent="." index="0" instance=ExtResource( 2 )]
+[node name="Sprites" parent="." index="0" instance=ExtResource( 2 )]
+
+[node name="ParallaxBackground" parent="." index="1" instance=ExtResource( 3 )]
 
 _sections_unfolded = [ "Scroll" ]
 
-[node name="LabelScore" type="Label" parent="." index="1"]
+[node name="LabelScore" type="Label" parent="." index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -33,7 +35,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
 text = "Score: 0"
 align = 1
 valign = 1
@@ -42,21 +44,19 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
 
-[node name="TimerSpawn" type="Timer" parent="." index="2"]
+[node name="TimerSpawn" type="Timer" parent="." index="3"]
 
 process_mode = 1
 wait_time = 0.1
 one_shot = false
 autostart = false
 
-[node name="TimerScore" type="Timer" parent="." index="3"]
+[node name="TimerScore" type="Timer" parent="." index="4"]
 
 process_mode = 1
 wait_time = 1.0
 one_shot = false
 autostart = true
-
-[node name="Sprites" parent="." index="4" instance=ExtResource( 4 )]
 
 [node name="Player" parent="." index="5" instance=ExtResource( 5 )]
 
@@ -74,7 +74,7 @@ bus = "Master"
 [node name="AudioMusic" type="AudioStreamPlayer" parent="." index="7"]
 
 stream = ExtResource( 7 )
-volume_db = -20.0
+volume_db = -25.0
 autoplay = false
 mix_target = 0
 bus = "Master"

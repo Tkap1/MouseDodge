@@ -1,6 +1,7 @@
 extends Node2D
 
-onready var projectile = load("res://Scenes/Projectile.tscn")
+var projectile = preload("res://Scenes/Projectile.tscn")
+
 onready var player = $Player
 onready var sprites = $Sprites
 onready var labelScore = $LabelScore
@@ -12,6 +13,7 @@ var width = 800
 var height = 450
 var spawns = [0,1,2,3]
 var score = 0
+var scoreToWin = 60
 
 func _ready():
 	# left
@@ -79,12 +81,12 @@ func _on_TimerScore_timeout():
 func updateScore(score):
 	self.score = score
 	labelScore.text = "Score: "+ str(score)
-	if score == 60:
+	if score == scoreToWin:
 		audioWin.play(0)
 		
 func _on_deathSound_finished():
 	Global.musicPlayback = music.get_playback_position()
-	if score < 60:
+	if score < scoreToWin:
 		Global.setSceneLose(self,score)
 	else:
 		Global.setSceneWin(self,score)
