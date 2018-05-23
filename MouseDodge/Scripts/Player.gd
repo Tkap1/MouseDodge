@@ -3,9 +3,13 @@ extends Area2D
 onready var tween = $Tween
 onready var collision = $CollisionShape2D
 onready var spr = $Sprite
+onready var trail = $Trail
+onready var death = $Death
 
 func _ready():
-	pass
+	if Global.removeParticles:
+		trail.queue_free()
+		death.queue_free()
 
 func _process(delta):
 	var mouse = get_viewport().get_mouse_position()

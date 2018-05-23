@@ -17,8 +17,4 @@ func _on_ButtonHard_pressed():
 	startGame()
 
 func startGame():
-	Global.setSceneGame(self)
-	
-func _input(event):
-	if event.is_action_released("fullscreen"):
-		OS.window_fullscreen = !OS.window_fullscreen
+	Global.setScene(Global.game)

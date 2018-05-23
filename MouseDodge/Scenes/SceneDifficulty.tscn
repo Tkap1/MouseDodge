@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/SceneDifficulty.gd" type="Script" id=1]
-[ext_resource path="res://Assets/background2.png" type="Texture" id=2]
-[ext_resource path="res://Assets/font64.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Assets/background4Dark.png" type="Texture" id=2]
+[ext_resource path="res://Assets/font128.tres" type="DynamicFont" id=3]
 
 [node name="SceneDifficulty" type="Node"]
 
@@ -16,14 +16,14 @@ centered = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." index="1"]
 
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -400.0
-margin_top = -225.0
-margin_right = 400.0
-margin_bottom = 225.0
+anchor_left = 1.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+margin_left = -800.0
+margin_right = 800.0
+margin_bottom = 896.0
+rect_scale = Vector2( 0.5, 0.5 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -32,6 +32,10 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_constants/separation = 10
 alignment = 1
+_sections_unfolded = [ "Rect" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Label" type="Label" parent="VBoxContainer" index="0"]
 
@@ -39,9 +43,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 45.0
-margin_right = 800.0
-margin_bottom = 123.0
+margin_top = 114.0
+margin_right = 1600.0
+margin_bottom = 269.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -55,7 +59,7 @@ valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
+_sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="ButtonEasy" type="Button" parent="VBoxContainer" index="1"]
 
@@ -63,9 +67,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 133.0
-margin_right = 800.0
-margin_bottom = 217.0
+margin_top = 279.0
+margin_right = 1600.0
+margin_bottom = 440.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -80,7 +84,7 @@ group = null
 text = "Easy"
 flat = false
 align = 1
-_sections_unfolded = [ "custom_fonts" ]
+_sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="ButtonNormal" type="Button" parent="VBoxContainer" index="2"]
 
@@ -88,9 +92,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 227.0
-margin_right = 800.0
-margin_bottom = 311.0
+margin_top = 450.0
+margin_right = 1600.0
+margin_bottom = 611.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -105,7 +109,7 @@ group = null
 text = "Normal"
 flat = false
 align = 1
-_sections_unfolded = [ "custom_fonts" ]
+_sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="ButtonHard" type="Button" parent="VBoxContainer" index="3"]
 
@@ -113,9 +117,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 321.0
-margin_right = 800.0
-margin_bottom = 405.0
+margin_top = 621.0
+margin_right = 1600.0
+margin_bottom = 782.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -130,7 +134,7 @@ group = null
 text = "Hard"
 flat = false
 align = 1
-_sections_unfolded = [ "custom_fonts" ]
+_sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [connection signal="pressed" from="VBoxContainer/ButtonEasy" to="." method="_on_ButtonEasy_pressed"]
 

@@ -62,14 +62,14 @@ func spawnProjectile():
 
 
 func _on_Player_area_entered(area):
+	if not Global.removeParticles:
+		player.death.emitting=true
+		player.trail.hide()
 	deathSound.play(0)
-	player.hide()
+	player.spr.hide()
 	player.collision.disabled = true
 	
-func _input(event):
-	if event.is_action_released("fullscreen"):
-		OS.window_fullscreen = !OS.window_fullscreen
-		
+func _input(event):	
 	if event.is_action_released("muteMusic"):
 		Global.muteMusic = !Global.muteMusic
 		checkMusic()
@@ -87,9 +87,9 @@ func updateScore(score):
 func _on_deathSound_finished():
 	Global.musicPlayback = music.get_playback_position()
 	if score < scoreToWin:
-		Global.setSceneLose(self,score)
+		Global.setScene(Global.lose,true,score)
 	else:
-		Global.setSceneWin(self,score)
+		Global.setScene(Global.win,true,score)
 
 func checkMusic():
 	if Global.muteMusic:

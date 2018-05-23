@@ -6,6 +6,7 @@ Play online: https://tkap1.github.io/MouseDodge/html/MouseDodge.html
 Download: https://github.com/Tkap1/MouseDodge/raw/master/MouseDodge.zip  
 
 -Controls-  
+P - Toggle particles
 R - Restart  
 D - Change difficulty  
 F - Toggle fullscreen  

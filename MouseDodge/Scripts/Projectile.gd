@@ -1,6 +1,6 @@
 extends Area2D
 
-const baseSize = 32.0
+const baseSize = 128.0
 
 var speed
 var direction
